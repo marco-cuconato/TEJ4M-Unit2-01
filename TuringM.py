@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Created by: Mr. Coxall
+Created by: Marco Cuconato
 Created on: Sept 2020
 This is "Turing Machine" program that accepts the state machine rules
     and the initial "tape" and then runs
