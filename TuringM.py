@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""
-Created by: Marco Cuconato
+""" https://replit.com/@mrcoxall/singlefileturingmachine#main.py
+Created by: Mr. Coxall
 Created on: Sept 2020
 This is "Turing Machine" program that accepts the state machine rules
     and the initial "tape" and then runs
@@ -94,14 +94,17 @@ class TuringMachine(object):
 #                                 ↓ state you become
 #                                       ↓ value to write to Tape
 #                                            ↓ direction to move
-state_machine = {("init","0"):("init", "1", "R"),
-                 ("init","1"):("init", "0", "R"),
-                 ("init"," "):("final"," ", "N"),
+state_machine = {("init" ,"0"):("init", "0","R"),
+                 ("init" ,"1"):("init", "1","R"),
+                 ("init" ," "):("init1"," ","L"),
+                 ("init1","0"):("init", "1","R"),
+                 ("init1","1"):("init1","0","L"),
+                 ("init1"," "):("final","1","N"),
                 }
 
 # initial tape
 #                  ↓ initial tape values
-t = TuringMachine("010011001 ", 
+t = TuringMachine("1011 ", 
                   initial_state = "init",
                   final_states = {"final"},
                   transition_function = state_machine)
